@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shop Simulation</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="text-center">Store Simulation</h1>
+    </header>
+
+    <div class="flex column center">
+      <!-- Simulate day button -->
+      <div class="section">
+        <button class="button">Simulate Day</button>
+      </div>
+
+      <!-- Day statistics container -->
+      <div class="section scrollable">
+        <table class="day-stats">
+          <tr>
+            <th style="width: 5%">Day</th>
+            <th>Customers</th>
+            <th>Transactions</th>
+            <th>Items</th>
+            <th>Earnings</th>
+            <th>IPT</th>
+            <th>ATV</th>
+            <th>Conversion</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>103</td>
+            <td>14</td>
+            <td>124</td>
+            <td>$6437</td>
+            <td>2.18</td>
+            <td>$80.65</td>
+            <td>12.7%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>255</td>
+            <td>4579</td>
+            <td>235</td>
+            <td>4586</td>
+            <td>2652</td>
+            <td>59657</td>
+            <td>59657</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>255</td>
+            <td>3475</td>
+            <td>347</td>
+            <td>3457</td>
+            <td>3457</td>
+            <td>4537</td>
+            <td>27543</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>255</td>
+            <td>4568</td>
+            <td>4568</td>
+            <td>125</td>
+            <td>1551</td>
+            <td>2345</td>
+            <td>3456</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>255</td>
+            <td>4579</td>
+            <td>235</td>
+            <td>4586</td>
+            <td>2652</td>
+            <td>59657</td>
+            <td>59657</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>255</td>
+            <td>4579</td>
+            <td>235</td>
+            <td>4586</td>
+            <td>2652</td>
+            <td>59657</td>
+            <td>59657</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>255</td>
+            <td>3475</td>
+            <td>347</td>
+            <td>3457</td>
+            <td>3457</td>
+            <td>4537</td>
+            <td>27543</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>255</td>
+            <td>4568</td>
+            <td>4568</td>
+            <td>125</td>
+            <td>1551</td>
+            <td>2345</td>
+            <td>3456</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>255</td>
+            <td>4579</td>
+            <td>235</td>
+            <td>4586</td>
+            <td>2652</td>
+            <td>59657</td>
+            <td>59657</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>255</td>
+            <td>4579</td>
+            <td>235</td>
+            <td>4586</td>
+            <td>2652</td>
+            <td>59657</td>
+            <td>59657</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>255</td>
+            <td>3475</td>
+            <td>347</td>
+            <td>3457</td>
+            <td>3457</td>
+            <td>4537</td>
+            <td>27543</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>255</td>
+            <td>4568</td>
+            <td>4568</td>
+            <td>125</td>
+            <td>1551</td>
+            <td>2345</td>
+            <td>3456</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Plot graph button -->
+      <div class="section">
+        <button class="button">Plot Last 7 Days</button>
+      </div>
+
+      <!-- Graph container -->
+      <div class="section">
+        graph
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+
+    <script src="ShopTest.js"></script>
+  </body>
+</html>
