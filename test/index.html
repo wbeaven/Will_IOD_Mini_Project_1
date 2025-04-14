@@ -16,11 +16,11 @@
     <div class="flex column center">
       <!-- Simulate day button -->
       <div class="section">
-        <button id="myButton" onclick="showContent()">Simulate Day</button>
+        <button id="myButton">Simulate Day</button>
       </div>
 
       <!-- Day statistics container -->
-      <div class="section scrollable">
+      <div id="scrollable" class="section">
         <table id="day-stats">
           <thead>
             <tr>
@@ -37,16 +37,6 @@
           <tbody>
             <template>
               <tr>
-                <td>1</td>
-                <td>103</td>
-                <td>14</td>
-                <td>124</td>
-                <td>$6437</td>
-                <td>2.18</td>
-                <td>$80.65</td>
-                <td>12.7%</td>
-              </tr>
-              <!-- <tr>
                 <td>`${}`</td>
                 <td>`${}`</td>
                 <td>`${}`</td>
@@ -55,62 +45,22 @@
                 <td>`${}`</td>
                 <td>`$${}`</td>
                 <td>`${}%`</td>
-              </tr> -->
+              </tr>
             </template>
           </tbody>
         </table>
       </div>
 
-      <!-- Plot graph button -->
-      <!-- <div class="section">
-        <button class="button">Plot Last 7 Days</button>
-      </div> -->
       <div class="gap"></div>
 
       <!-- Graph container -->
       <div class="section graph">
-        graph
         <canvas id="myChart"></canvas>
       </div>
     </div>
 
-    <!-- Placeholder graph  -->
+    <!-- Graph  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const ctx = document.getElementById("myChart");
-
-      new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [
-            {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    </script>
-
-    <!-- Temporary create day from template -->
-    <script>
-      function showContent() {
-        let temp = document.getElementsByTagName("template")[0];
-        let clon = temp.content.cloneNode(true);
-        document.getElementById("day-stats").appendChild(clon);
-      }
-    </script>
-
-    <script src="ShopTest.js"></script>
-    <script src="../index.js"></script>
+    <script src="simulateDay.js"></script>
   </body>
 </html>

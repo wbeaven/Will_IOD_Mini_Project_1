@@ -41,11 +41,11 @@ module.exports = {
   },
   create(day) {
     const id = ++lastId;
-    const newBook = {
+    const newDay = {
       id,
       title: book.title,
     };
-    days.push(newBook);
-    return newBook;
+    days.push(newDay);
+    return newDay;
   },
 };
