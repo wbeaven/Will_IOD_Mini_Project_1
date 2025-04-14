@@ -42,6 +42,10 @@ function simulateDay() {
   const values = Object.values(newDay);
   tds.forEach((td, index) => {
     td.textContent = values[index] ?? "";
+    td.addEventListener("click", function (e) {
+      e.preventDefault();
+      td.parentNode.parentNode.removeChild(td.parentNode);
+    });
   });
   document.getElementById("day-stats").appendChild(clon);
 

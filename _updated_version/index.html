@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="purp_dollar.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Store Simulation</title>
   </head>
 
@@ -16,11 +16,11 @@
     <div class="flex column center">
       <!-- Simulate day button -->
       <div class="section">
-        <button id="myButton" onclick="showContent()">Simulate Day</button>
+        <button id="myButton">Simulate Day</button>
       </div>
 
       <!-- Day statistics container -->
-      <div class="section scrollable">
+      <div id="scrollable" class="section">
         <table id="day-stats">
           <thead>
             <tr>
@@ -50,6 +50,7 @@
           </tbody>
         </table>
       </div>
+
       <div class="gap"></div>
 
       <!-- Graph container -->
@@ -58,33 +59,8 @@
       </div>
     </div>
 
-    <!-- Placeholder graph  -->
+    <!-- Graph  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const ctx = document.getElementById("myChart");
-
-      new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [
-            {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    </script>
-
-    <script src="/controllers/index.js"></script>
+    <script src="controller.js"></script>
   </body>
 </html>
