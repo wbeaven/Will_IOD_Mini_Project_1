@@ -2,8 +2,8 @@
   "name": "will_iod_mini_project_1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
+    "start": "nodemon ./_updated_version/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
