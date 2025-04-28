@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/", express.static("./_updated_version/public"));
+app.use("/", express.static("./src/public"));
 
 app.get("/days", (req, res) => {
   res.json(days);
